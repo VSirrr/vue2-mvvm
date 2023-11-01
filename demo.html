@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>a的值{{a.name}}</p>
+    <p>b的值{{b}}</p>
+    <input type="text" v-model="b"> {{hello}}
+  </div>
+  <script src="./mvvm.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        a: {
+          name: 'vsirrr'
+        },
+        b: 27,
+        c: 26
+      },
+      computed: {
+        hello() {
+          return Number(this.b) + Number(this.c)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
